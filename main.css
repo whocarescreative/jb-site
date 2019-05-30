@@ -74,11 +74,11 @@ header {
 }
 
 .mb-3 {
-  margin-bottom: 3rem;
+  margin-bottom: 4rem;
 }
 
 .mb-4 {
-  margin-bottom: 4rem;
+  margin-bottom: 6rem;
 }
 
 .collage {
@@ -97,6 +97,29 @@ header {
   grid-column: 3 / span 3;
 }
 
+.fact {
+  border: 4px solid #CDCDCD;
+  padding: 2rem;
+  position: relative;
+}
+
+.fact__title {
+  margin-top:-4.5rem;
+  z-index: 2;
+}
+.fact:before {
+  background: none;
+  border: 4px solid #CDCDCD;
+  content: "";
+  display: block;
+  position: absolute;
+  top: 4px;
+  z-index: -1;
+  left: 4px;
+  right: 4px;
+  bottom: 4px;
+  pointer-events: none;
+}
 .text-section--raised {
   background-color: white;
   padding: 4rem;
@@ -171,9 +194,13 @@ header {
   }
 
   .text-section--raised {
-    background-color: white;
     padding: 2rem;
     grid-column: 2 / span 3;
-    margin-top: -4em;
+    margin-top: -4rem;
+  }
+
+  .fact__title {
+    margin-top:-4rem;
+    z-index: 2;
   }
 }
