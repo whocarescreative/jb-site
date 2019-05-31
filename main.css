@@ -8,6 +8,24 @@ content {
   grid-template-rows: auto;
   grid-template-columns: 4rem 4rem 8rem 1fr 8rem 4rem 4rem;
   grid-auto-rows: auto;
+  color: #707070;
+}
+
+.footer {
+  /* background-color: #343434; */
+  padding: 4rem 8rem;
+}
+
+.form__email {
+  width: calc(100% - 14rem);
+  float: left;
+  font-family: 'Avenir';
+  padding:1rem;
+  font-size: 1rem;
+}
+
+.form__btn {
+  width: 10rem;
 }
 
 nav {
@@ -24,7 +42,7 @@ header {
   display: grid;
   position: relative;
   grid-template-columns: 55% auto 16rem;
-  grid-template-rows: 20% auto 20%;
+  grid-template-rows: 20% 10% 20%;
   overflow: hidden;
 }
 
@@ -44,18 +62,42 @@ header {
   font-weight: bold;
   padding: 1rem 1.5rem;
   font-size: 1.25rem;
+  margin: auto auto 10px 0px;
+
+  display: inline-block;
   cursor: pointer;
+}
+
+.btn--white {
+  color: white;
+  border: 1px solid white;
+  background: transparent;
 }
 
 .text--lg {
   font-family: 'Century Schoolbook';
   font-size: 3rem;
-  color: #707070;
   line-height: 3.5rem;
+}
+
+.text--dark {
+  color: #707070;
+}
+
+.text-white {
+  color: white;
 }
 
 .text--bold {
   font-weight: bold;
+}
+
+.bg-grey {
+  background-color: #F7F7F7;
+}
+
+.bg-dark {
+  background-color: #343434;
 }
 
 .text--body {
@@ -133,8 +175,38 @@ header {
   object-fit: cover;
 }
 
-.grid-span-all {
-  grid-column: 1/-1;
+.grey-section {
+  /* width: 100%; */
+  display: grid;
+  
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-column: -1/1;
+  padding: 4rem;
+    min-height: 500px;
+    position: relative;
+  background-color: #F7F7F7;
+}
+
+.text--raised {
+  margin-top: -4.5rem;
+}
+
+.grey-section__title {
+  position: absolute;
+  top:-2rem;
+  left: 8rem;
+}
+
+.grey-section__wrap {
+  grid-column: 1 / -1;
+}
+
+.grey-section__child {
+  height:100%;
+  /* width: 10%; */
+  display: inline;
+  z-index: 9;
+  border: 3px solid black;
 }
 
 .grid-col-2 {
@@ -160,15 +232,13 @@ header {
     grid-template-columns: 2rem 2rem auto 2rem 2rem;
   }
 
+  .footer {
+    padding: 4rem 2rem;
+  }
+
   .btn {
-    font-family: 'Avenir';
-    text-transform: uppercase;
-    color: white;
-    background: #CEAC99;
-    font-weight: bold;
     padding: 1rem 1rem;
     font-size: 1rem;
-    cursor: pointer;
   }
 
   .text--lg {
