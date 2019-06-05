@@ -375,12 +375,13 @@ content {
 .dropdown {
   border: 2px solid var(--color-border);
   padding: 2rem 2rem;
-  cursor: pointer;
+  
   font-weight: bold;
 }
 
 .dropdown__line--text {
   padding-right:1rem;
+  cursor: pointer;
 }
 
 .dropdown__line {
@@ -390,9 +391,11 @@ content {
 
 .dropdown-arrow {
   margin-left: auto;
+  padding: 0.25rem 1rem;
   /* padding-left:10px; */
   transition: transform 0.25s;
   transform: rotate(90deg);
+  cursor: pointer;
 }
 
 .dropdown-closed .dropdown-arrow {

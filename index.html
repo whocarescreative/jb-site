@@ -98,13 +98,99 @@
                             I know firsthand the difference it makes to have the right support and resources in place.
                         </div>
                     </div>
+
+                    <div class="mb-1 dropdown text--body dropdown-closed">          
+                        <div class="dropdown__line">
+                            <span class="dropdown__line--text">
+                                Do you offer coaching programs for more seasoned entrepreneurs?
+                            </span>
+                            <div class="dropdown-arrow">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="12.377" height="21.814" viewBox="0 0 12.377 21.814">
+                                    <path id="Path_3" data-name="Path 3" d="M0,0,10.657,11.046,0,20.367" transform="translate(0.719 0.695)" fill="none" stroke="#707070" stroke-linejoin="round" stroke-width="2"/>
+                                </svg>  
+                            </div>
+                        </div>     
+                        <div class="dropdown__body">
+                            <br>
+                            Absolutely! When you grow and scale your business as an entrepreneur, new levels of resourcing and support are a must. You may have questions or hesitations around entering new markets, expanding your product lines, or bringing on an investor. You may be feeling overwhelmed or burnt out after a few years in business. I provide you with tools and guidance as you expand, while ensuring you feel deeply supported as you move into the next phase. 
+                        </div>
+                    </div>
+
+                    <div class="mb-1 dropdown text--body dropdown-closed">          
+                        <div class="dropdown__line">
+                            <span class="dropdown__line--text">
+                                What is the typical length of a coaching relationship? 
+                            </span>
+                            <div class="dropdown-arrow">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="12.377" height="21.814" viewBox="0 0 12.377 21.814">
+                                    <path id="Path_3" data-name="Path 3" d="M0,0,10.657,11.046,0,20.367" transform="translate(0.719 0.695)" fill="none" stroke="#707070" stroke-linejoin="round" stroke-width="2"/>
+                                </svg>  
+                            </div>
+                        </div>     
+                        <div class="dropdown__body">
+                            <br>
+                            The duration of our relationship will vary depending on the kind of coaching support you require. I recommend all of my clients begin with a six month commitment, as this leads to the most effective results.                                 
+                        </div>
+                    </div>
+
+                    <div class="mb-1 dropdown text--body dropdown-closed">          
+                        <div class="dropdown__line">
+                            <span class="dropdown__line--text">
+                                What kinds of things will we cover during our coaching sessions?
+                            </span>
+                            <div class="dropdown-arrow">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="12.377" height="21.814" viewBox="0 0 12.377 21.814">
+                                    <path id="Path_3" data-name="Path 3" d="M0,0,10.657,11.046,0,20.367" transform="translate(0.719 0.695)" fill="none" stroke="#707070" stroke-linejoin="round" stroke-width="2"/>
+                                </svg>  
+                            </div>
+                        </div>     
+                        <div class="dropdown__body">
+                            <br>
+                            You are the ultimate architect when it comes to your life, and the same applies to our sessions. Our coaching calls will begin with a discussion around your coaching requests for the week and then we hit the ground running. We cover the full spectrum and life and business.                            
+                        </div>
+                    </div>
+
+                    <div class="mb-1 dropdown text--body dropdown-closed">          
+                        <div class="dropdown__line">
+                            <span class="dropdown__line--text">
+                                What does a blend of life and business coaching actually look like? 
+                            </span>
+                            <div class="dropdown-arrow">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="12.377" height="21.814" viewBox="0 0 12.377 21.814">
+                                    <path id="Path_3" data-name="Path 3" d="M0,0,10.657,11.046,0,20.367" transform="translate(0.719 0.695)" fill="none" stroke="#707070" stroke-linejoin="round" stroke-width="2"/>
+                                </svg>  
+                            </div>
+                        </div>     
+                        <div class="dropdown__body">
+                            <br>
+                            I believe that building a successful business requires tremendous personal development. As a life coach, I ask incisive questions and share my insight to help you resolve blocks and embrace your full potential. As a business coach, I provide consultation that moves your business forward including: strategic guidance, transition planning, revenue generation, and customer acquisition.                            
+                        </div>
+                    </div>
+
+                    <div class="mb-1 dropdown text--body dropdown-closed">          
+                        <div class="dropdown__line">
+                            <span class="dropdown__line--text">
+                                How do I know if your coaching style is right for me? 
+                            </span>
+                            <div class="dropdown-arrow">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="12.377" height="21.814" viewBox="0 0 12.377 21.814">
+                                    <path id="Path_3" data-name="Path 3" d="M0,0,10.657,11.046,0,20.367" transform="translate(0.719 0.695)" fill="none" stroke="#707070" stroke-linejoin="round" stroke-width="2"/>
+                                </svg>  
+                            </div>
+                        </div>     
+                        <div class="dropdown__body">
+                            <br>
+                            During our discovery call, you’ll get a good sense of my approach to life and business coaching and you can ask me questions to ensure my style aligns with your needs. If I had to describe my approach to coaching in two words, it would be holistic and expansive. Successful businesses are born from sound strategy and the entrepreneur’s capacity to fully embrace their potential, move forward with confidence in their business, and cultivate meaningful and supportive practices.                             
+                        </div>
+                    </div>
+
                 </div>
             </div>
         </content>
         <div class="footer py-4 bg-dark">
             <div class="footer__text">
-                    <div class="text--lg text-white mb-2">Ready to transform from employee to entrepreneur?</div>
-                    <a class="btn btn--white">Schedule a complimentary call</a>
+                <div class="text--lg text-white mb-2">Ready to transform from employee to entrepreneur?</div>
+                <a class="btn btn--white">Schedule a complimentary call</a>
             </div>
         </div>
         <div class="footer py-4 bg-grey">
@@ -130,14 +216,16 @@
         </div>
         <script>
             // #region dropdown
+            const dropdownLineEls = document.getElementsByClassName('dropdown__line');
             const dropdownEls = document.getElementsByClassName('dropdown');
             const dropdownBodyEls = document.getElementsByClassName('dropdown__body');
 
             for (let i = 0; i < dropdownEls.length; i++) {
                 const dropdownEl = dropdownEls[i];
+                const dropdownLineEl = dropdownLineEls[i];
                 const dropdownBodyEl = dropdownBodyEls[i];
 
-                dropdownEl.addEventListener('click', () => dropdownEl.classList.toggle('dropdown-closed'));
+                dropdownLineEl.addEventListener('click', () => dropdownEl.classList.toggle('dropdown-closed'));
             }
             // #endregion
 
