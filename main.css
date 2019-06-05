@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Nunito:400,700&display=swap');
+
 html, body {
   margin: 0;
   /* font-size: 1em; */
@@ -34,7 +36,7 @@ content {
 .form__email {
   width: calc(100% - 14rem);
   float: left;
-  font-family: 'Avenir';
+  font-family: 'Nunito';
   padding:1rem;
   font-size: 1rem;
 }
@@ -72,7 +74,7 @@ header {
 
 
 .btn {
-  font-family: 'Avenir';
+  font-family: 'Nunito';
   text-transform: uppercase;
   color: white;
   background: #CEAC99;
@@ -127,7 +129,7 @@ header {
 }
 
 .text--body {
-  font-family: 'Avenir';
+  font-family: 'Nunito';
   font-size: 1.5rem;
   line-height: 2rem;
   color: #707070;
