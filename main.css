@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Nunito:400,700&display=swap');
+
 html, body {
   margin: 0;
   /* font-size: 1em; */
@@ -16,14 +18,25 @@ content {
 }
 
 .footer {
-  /* background-color: #343434; */
-  padding: 4rem 8rem;
+  padding: 4rem 0;
+  display: grid;
+  grid-template-columns: 
+    minmax(4rem, 1fr) 
+    4rem
+    minmax(auto, 900px)  
+    4rem
+    minmax(4rem, 1fr);
+}
+
+.footer__text {
+  grid-column-start: 3;
+  grid-column-end: span 1;
 }
 
 .form__email {
   width: calc(100% - 14rem);
   float: left;
-  font-family: 'Avenir';
+  font-family: 'Nunito';
   padding:1rem;
   font-size: 1rem;
 }
@@ -61,7 +74,7 @@ header {
 
 
 .btn {
-  font-family: 'Avenir';
+  font-family: 'Nunito';
   text-transform: uppercase;
   color: white;
   background: #CEAC99;
@@ -116,7 +129,7 @@ header {
 }
 
 .text--body {
-  font-family: 'Avenir';
+  font-family: 'Nunito';
   font-size: 1.5rem;
   line-height: 2rem;
   color: #707070;
@@ -246,7 +259,8 @@ header {
   }
 
   .footer {
-    padding: 4rem 2rem;
+    grid-template-columns: 0rem 2rem 1fr 2rem 0rem;
+    padding: 2rem 0;
   }
 
   .btn {
