@@ -63,6 +63,10 @@ html, body {
   font-weight: bold;
 }
 
+.text--italic {
+  font-weight: italic;
+}
+
 .text--uppercase {
   text-transform: uppercase;
 }
