@@ -455,6 +455,11 @@ content {
     line-height: 1.5rem;
   }
 
+  .text--sm  {
+    font-size: 0.85rem;
+    line-height: 1.25rem;
+  }
+
   .collage {
     grid-column-end: -1;
   }
