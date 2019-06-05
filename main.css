@@ -411,7 +411,7 @@ content {
 }
 
 .dropdown__body {
-  transition: max-height 0.3s;
+  transition: max-height 0.5s;
   overflow: hidden;
   font-weight: normal;
   max-height: 400px;
