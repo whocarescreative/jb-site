@@ -256,7 +256,7 @@ content {
 }
 
 .grey-section__wrap {
-  overflow-x: scroll;
+  noverflow-x: scroll;
   overflow-y: hidden;
   white-space: nowrap;
 
@@ -271,7 +271,7 @@ content {
 }
 
 .grey-section__child {
-  font-family: 'Nunito';
+  font-family: 'Lato';
 
   display: inline-block;
   width: 500px;
