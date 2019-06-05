@@ -115,13 +115,13 @@
                 </div>
             </div>
         </content>
-        <div class="footer bg-dark">
+        <div class="footer py-4 bg-dark">
             <div class="footer__text">
                     <div class="text--lg text-white mb-2">Ready to transform from employee to entrepreneur?</div>
                     <a class="btn btn--white">Schedule a complimentary call</a>
             </div>
         </div>
-        <div class="footer bg-grey">
+        <div class="footer py-4 bg-grey">
             <div class="footer__text">
                 <div class="text--lg text--dark mb-2">Stay Connected</div>
                 <form class="form mb-2" action="https://ink.us20.list-manage.com/subscribe/post?u=6e6118dcef1be7b1dd65e637b&amp;id=2f1c20dcce" method="post" name="mc-embedded-subscribe-form" target="_blank" novalidate class="footer-email-form">
@@ -134,6 +134,12 @@
                 <div class="text--body mb-2">
                     To reach me directly regarding coaching, press, and events please send me an email at <a class="text--bold text--dark" href="mailto:jana@allofherbusiness.com">jana@allofherbusiness.com</a>
                 </div>
+            </div>
+        </div>
+        <div class="footer py-2">
+            <div class="footer__text footer__text--flex">
+                <img class="footer__logo" src="img/aohb.png"/>
+                <a href="#/" class="footer__jump-to-top text--sm text--bold text--uppercase">Jump To Top</a>
             </div>
         </div>
         <script>
@@ -151,6 +157,9 @@
 
             // #region drag input for box list section
             // #endregion
+
+            const jumpToTopEl = document.getElementsByClassName('footer__jump-to-top')[0];
+            jumpToTopEl.addEventListener('click', () => window.scrollTo({top: 0, behavior: 'smooth'}));
         </script>
     </body>
 </html>
