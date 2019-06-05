@@ -6,8 +6,12 @@ html, body {
 content {
   display: grid;
   grid-template-rows: auto;
-  grid-template-columns: 4rem 4rem 8rem 1fr 8rem 4rem 4rem;
-  grid-auto-rows: auto;
+  grid-template-columns: 
+    minmax(4rem, 1fr) 
+    4rem
+    minmax(auto, 900px)  
+    4rem
+    minmax(4rem, 1fr);
   color: #707070;
 }
 
@@ -42,7 +46,7 @@ header {
   display: grid;
   position: relative;
   grid-template-columns: 55% auto 16rem;
-  grid-template-rows: 20% 10% 20%;
+  /* grid-template-rows: 20% 10% 20%; */
   overflow: hidden;
 }
 
@@ -54,6 +58,8 @@ header {
   object-fit: cover;
 }
 
+
+
 .btn {
   font-family: 'Avenir';
   text-transform: uppercase;
@@ -63,15 +69,24 @@ header {
   padding: 1rem 1.5rem;
   font-size: 1.25rem;
   margin: auto auto 10px 0px;
-
-  display: inline-block;
   cursor: pointer;
+  display: inline-block;
 }
 
 .btn--white {
   color: white;
   border: 1px solid white;
   background: transparent;
+}
+
+.header__blurb {
+  grid-column-start: 2;
+  grid-column-end: span 1;
+  grid-row-start: 2;
+}
+
+.header__cta {
+  display: initial;
 }
 
 .text--lg {
@@ -124,7 +139,7 @@ header {
 }
 
 .collage {
-  grid-column-end: span 3;
+  grid-column-end: span 2;
 }
 
 .collage--left {
@@ -132,11 +147,12 @@ header {
 }
 
 .collage--right {
-  grid-column-start: 4;
+  grid-column-start: 3;
 }
 
 .text-section {
-  grid-column: 3 / span 3;
+  grid-column-start: 3;
+  grid-column-end: span 1;
 }
 
 .fact {
@@ -165,7 +181,6 @@ header {
 .text-section--raised {
   background-color: white;
   padding: 4rem;
-  grid-column: 3 / span 3;
   margin-top: -4em;
 }
 
@@ -221,27 +236,11 @@ header {
   scroll-snap-align: center;
 }
 
-.grid-col-2 {
-  grid-column-start: 2;
-}
-
-.grid-col-3 {
-  grid-column-start: 3;
-}
-
-.grid-row-2 {
-  grid-row-start: 2;
-}
-
-.grid-row-3 {
-  grid-row-start: 3;
-}
-
 @media screen and (max-width: 900px) {
   /* html { font-size: 0.75rem; } */
 
   content {
-    grid-template-columns: 2rem 2rem auto 2rem 2rem;
+    grid-template-columns: 0rem 2rem 1fr 2rem 0rem;
   }
 
   .footer {
@@ -263,21 +262,18 @@ header {
     line-height: 1.5rem;
   }
 
-  .collage--left {
-    grid-column-start: 1;
+  .collage {
+    grid-column-end: -1;
   }
 
-  .collage--right {
-    grid-column-start: 3;
+  .collage--left, .collage--right {
+    grid-column-start: 2;
   }
 
-  .text-section {
-    grid-column: 2 / span 3;
-  }
 
   .text-section--raised {
     padding: 2rem;
-    grid-column: 2 / span 3;
+    /* grid-column: 2 / span 3; */
     margin-top: -4rem;
   }
 
