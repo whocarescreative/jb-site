@@ -262,6 +262,9 @@ content {
   position: relative;
   background-color: #F7F7F7;
 
+  font-size: 1.25rem;
+  line-height: 1.6rem;
+
   grid-template-columns: 
   minmax(4rem, 1fr) 
   4rem
@@ -269,6 +272,8 @@ content {
   4rem
   minmax(4rem, 1fr);
   display: grid;
+
+  padding: 4rem 0;
 }
 
 .grey-section__title {
@@ -278,7 +283,7 @@ content {
   grid-column: 2 / 4;
 }
 
-.grey-section__wrap {
+.boxed-info-list {
   grid-column: 1/-1;
 
   overflow-x: scroll;
@@ -291,26 +296,72 @@ content {
   -ms-overflow-style: none;
 }
 
-.grey-section__wrap::-webkit-scrollbar {
+.boxed-info-list::-webkit-scrollbar {
   display: none;
 }
 
-.grey-section__child {
+.boxed-info {
   font-family: 'Lato';
 
   cursor: grab;
 
   display: inline-block;
   width: 500px;
+  max-width: 100%;
   height: 100%;
   white-space: normal;
 
-  margin: 50px;
   border: 2px solid #CDCDCD;
   padding: 30px;
+  margin: 2rem;
 
   scroll-snap-align: center;
 }
+
+/* #region dropdown */
+
+.dropdown {
+  border: 2px solid #CDCDCD; 
+  padding: 2rem 3rem;
+  cursor: pointer;
+
+  font-weight: bold;
+}
+
+.dropdown-arrow {
+  float: right;
+  transition: transform 0.25s;
+
+  transform: rotate(90deg);
+}
+
+.dropdown-closed .dropdown-arrow {
+  transform: rotate(0deg);
+}
+
+.dropdown-body {
+  transition: max-height 0.3s;
+  overflow: hidden;
+
+  font-weight: normal;
+
+  max-height: 200px;
+}
+
+.dropdown-closed .dropdown-body {
+  max-height: 0px;
+}
+
+/* #endregion dropdown */
+
+.form__email {
+  width: calc(100% - 8rem);
+}
+
+.form__btn {
+  width: 8rem;
+}
+  
 
 @media screen and (max-width: 900px) {
   /* html { font-size: 0.75rem; } */
@@ -357,50 +408,5 @@ content {
   .fact__title {
     margin-top:-4rem;
     z-index: 2;
-  }
-}
-
-/* #region dropdown */
-
-.dropdown {
-    border: 2px solid #CDCDCD; 
-    padding: 2rem 3rem;
-    cursor: pointer;
-
-    font-weight: bold;
-}
-
-.dropdown-arrow {
-    float: right;
-    transition: transform 0.5s;
-
-    transform: rotate(90deg);
-}
-
-.dropdown-closed .dropdown-arrow {
-    transform: rotate(0deg);
-}
-
-.dropdown-body {
-    transition: max-height 0.5s;
-    overflow: hidden;
-
-    font-weight: normal;
-
-    max-height: 200px;
-}
-
-.dropdown-closed .dropdown-body {
-    max-height: 0px;
-}
-
-/* #endregion dropdown */
-
-  .form__email {
-    width: calc(100% - 8rem);
-  }
-  
-  .form__btn {
-    width: 8rem;
   }
 }

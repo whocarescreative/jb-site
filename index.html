@@ -54,8 +54,8 @@
             </div>
             <div class="grey-section mb-4">
                 <div class="text--lg grey-section__title text-bold mb-2">Word on the street</div>
-                <div class="grey-section__wrap">
-                    <div class="grey-section__child">
+                <div class="boxed-info-list">
+                    <div class="boxed-info">
                         <span style="display: inline-block;">
                             <svg xmlns="http://www.w3.org/2000/svg" width="27.148" height="22.344" viewBox="0 0 27.148 22.344">
                                 <path id="Path_11" data-name="Path 11" d="M-2.793-59.414l1.25,1.641a22.362,22.362,0,0,0-5.684,5.508,9,9,0,0,0-1.816,4.727q0,1.328.938,1.328l.391-.039a6.675,6.675,0,0,1,1.563-.234A3.962,3.962,0,0,1-3.2-45.215a4.342,4.342,0,0,1,1.23,3.145,5.121,5.121,0,0,1-1.309,3.535A3.959,3.959,0,0,1-6.309-37.07,5.792,5.792,0,0,1-10.723-39.2a7.953,7.953,0,0,1-1.914-5.527Q-12.637-52.891-2.793-59.414Zm16.016,0,1.289,1.646a22.389,22.389,0,0,0-5.684,5.524A9.04,9.04,0,0,0,7.012-47.5q0,1.332.9,1.332l.391-.039a7.075,7.075,0,0,1,1.563-.234,4.014,4.014,0,0,1,2.988,1.265,4.315,4.315,0,0,1,1.23,3.132,5.044,5.044,0,0,1-1.328,3.52A3.987,3.987,0,0,1,9.746-37.07,5.771,5.771,0,0,1,5.313-39.2a8,8,0,0,1-1.895-5.527Q3.418-52.891,13.223-59.414Z" transform="translate(12.637 59.414)" fill="#707070" opacity="0.34"/>
@@ -72,14 +72,14 @@
                             Calgary, AB                                    
                         </div>
                     </div>
-                    <div class="grey-section__child">hello</div>
-                    <div class="grey-section__child">hello</div>
+                    <div class="boxed-info">hello</div>
+                    <div class="boxed-info">hello</div>
                 </div>
             </div>
 
             <div class="grey-section mb-4">
                 <div class="text--lg grey-section__title text-bold mb-2">FAQ</div>
-                <div style="font-family: 'Lato'; grid-column: 3 / 4; padding-top: 4rem;">
+                <div style="font-family: 'Lato'; grid-column: 3 / 4;">
                     <div class="mb-1 dropdown dropdown-closed">               
                         What kind of experience do you bring to the table as a coach? 
                         <div class="dropdown-arrow">
@@ -88,7 +88,7 @@
                             </svg>  
                         </div>
                         <div class="dropdown-body">
-                            <br><br>
+                            <br>
                             I am a strategic business coach with an incredible passion for what I do. 
                             I have extensive experience accelerating over 30 businesses and brands, including Visa, Nissan, Clorox, Travel Alberta, the Alberta Ballet, and the Calgary Stampede. 
                             I have consulted on a range of enterprises from large multinationals to local businesses and start-ups. 
@@ -96,15 +96,15 @@
                             I know firsthand the difference it makes to have the right support and resources in place.
                         </div>
                     </div>
-                    <div class="mb-1 dropdown dropdown-closed">
-                        see more
+                    <div class="mb-1 dropdown dropdown-closed">               
+                        Do you offer coaching programs for more seasoned entrepreneurs?
                         <div class="dropdown-arrow">
                             <svg xmlns="http://www.w3.org/2000/svg" width="12.377" height="21.814" viewBox="0 0 12.377 21.814">
                                 <path id="Path_3" data-name="Path 3" d="M0,0,10.657,11.046,0,20.367" transform="translate(0.719 0.695)" fill="none" stroke="#707070" stroke-linejoin="round" stroke-width="2"/>
                             </svg>  
                         </div>
                         <div class="dropdown-body">
-                            <br><br>
+                            <br>
                             I am a strategic business coach with an incredible passion for what I do. 
                             I have extensive experience accelerating over 30 businesses and brands, including Visa, Nissan, Clorox, Travel Alberta, the Alberta Ballet, and the Calgary Stampede. 
                             I have consulted on a range of enterprises from large multinationals to local businesses and start-ups. 
@@ -137,6 +137,7 @@
             </div>
         </div>
         <script>
+            // #region dropdown
             const dropdownEls = document.getElementsByClassName('dropdown');
             const dropdownBodyEls = document.getElementsByClassName('dropdown-body');
 
@@ -146,6 +147,29 @@
 
                 dropdownEl.addEventListener('click', () => dropdownEl.classList.toggle('dropdown-closed'));
             }
+            // #endregion
+
+            // #region drag input for box list section
+            const boxlistEls = document.getElementsByClassName('boxed-info-list');
+
+            let mousePrevX = 0;
+            let mouseX = 0;
+
+            document.body.addEventListener('mousemove', e => {
+                mousePrevX = mouseX;
+                mouseX = e.x;
+            });
+
+            for (const boxlistEl of boxlistEls) {
+                
+                boxlistEl.addEventListener('mousedown', e => {
+                    e.offsetX
+                });
+                boxlistEl.addEventListener('mouseup', e => {
+                    
+                });
+            }
+            // #endregion
         </script>
     </body>
 </html>
