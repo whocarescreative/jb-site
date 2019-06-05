@@ -245,51 +245,6 @@ content {
 .text--raised {
   margin-top: -4.5rem;
 }
-
-.grey-section {
-  grid-column: -1/1;
-  min-height: 500px;
-  position: relative;
-  background-color: var(--color-light-grey);
-}
-
-.grey-section__title {
-  position: absolute;
-  top:-2rem;
-  left: 8rem;
-}
-
-.grey-section__wrap {
-  noverflow-x: scroll;
-  overflow-y: hidden;
-  white-space: nowrap;
-
-  scroll-snap-type: x mandatory;
-
-  scrollbar-width: none;
-  -ms-overflow-style: none;
-}
-
-.grey-section__wrap::-webkit-scrollbar {
-  display: none;
-}
-
-.grey-section__child {
-  font-family: var(--font-primary);
-
-  display: inline-block;
-  width: 500px;
-  height: 100%;
-  white-space: normal;
-
-  margin: 50px;
-  border: 2px solid var(--color-highlight);
-  padding: 30px;
-
-  scroll-snap-align: center;
-}
-
-
 /*#endregion Content*/
 
 /*#region Footer*/
@@ -339,8 +294,60 @@ content {
   
 /*#endregion Footer*/
 
+.grey-section {
+  grid-column: -1/1;
+  position: relative;
+  background-color: #F7F7F7;
 
+  grid-template-columns: 
+  minmax(4rem, 1fr) 
+  4rem
+  minmax(auto, 900px)  
+  4rem
+  minmax(4rem, 1fr);
+  display: grid;
+}
 
+.grey-section__title {
+  position: absolute;
+  top:-2rem;
+
+  grid-column: 2 / 4;
+}
+
+.grey-section__wrap {
+  grid-column: 1/-1;
+
+  overflow-x: scroll;
+  overflow-y: hidden;
+  white-space: nowrap;
+
+  scroll-snap-type: x mandatory;
+
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.grey-section__wrap::-webkit-scrollbar {
+  display: none;
+}
+
+.grey-section__child {
+  font-family: 'Lato';
+
+  cursor: grab;
+
+  display: inline-block;
+  width: 500px;
+  height: 100%;
+  white-space: normal;
+
+  margin: 50px;
+  border: 2px solid #CDCDCD;
+  padding: 30px;
+
+  scroll-snap-align: center;
+}
 
 @media screen and (max-width: 900px) {
   content {
@@ -385,6 +392,43 @@ content {
     margin-top:-4rem;
     z-index: 2;
   }
+}
+
+/* #region dropdown */
+
+.dropdown {
+    border: 2px solid #CDCDCD; 
+    padding: 2rem 3rem;
+    cursor: pointer;
+
+    font-weight: bold;
+}
+
+.dropdown-arrow {
+    float: right;
+    transition: transform 0.5s;
+
+    transform: rotate(90deg);
+}
+
+.dropdown-closed .dropdown-arrow {
+    transform: rotate(0deg);
+}
+
+.dropdown-body {
+    transition: max-height 0.5s;
+    overflow: hidden;
+
+    font-weight: normal;
+
+    max-height: 200px;
+}
+
+.dropdown-closed .dropdown-body {
+    max-height: 0px;
+}
+
+/* #endregion dropdown */
 
   .form__email {
     width: calc(100% - 8rem);
