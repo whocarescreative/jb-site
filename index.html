@@ -54,7 +54,7 @@
             </div>
             <div class="grey-section mb-4">
                 <div class="text--lg grey-section__title text-bold mb-2">Word on the street</div>
-                <div class="boxed-info-list">
+                <div class="boxed-info-list dragscroll">
                     <div class="boxed-info">
                         <span style="display: inline-block;">
                             <svg xmlns="http://www.w3.org/2000/svg" width="27.148" height="22.344" viewBox="0 0 27.148 22.344">
@@ -150,25 +150,6 @@
             // #endregion
 
             // #region drag input for box list section
-            const boxlistEls = document.getElementsByClassName('boxed-info-list');
-
-            let mousePrevX = 0;
-            let mouseX = 0;
-
-            document.body.addEventListener('mousemove', e => {
-                mousePrevX = mouseX;
-                mouseX = e.x;
-            });
-
-            for (const boxlistEl of boxlistEls) {
-                
-                boxlistEl.addEventListener('mousedown', e => {
-                    e.offsetX
-                });
-                boxlistEl.addEventListener('mouseup', e => {
-                    
-                });
-            }
             // #endregion
         </script>
     </body>
