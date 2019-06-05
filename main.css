@@ -331,16 +331,27 @@ content {
 
   scrollbar-width: none;
   -ms-overflow-style: none;
+
+  padding: 0 4rem;
+
+  cursor: grab;
+  user-select: none; /* supported by Chrome and Opera */
+   -webkit-user-select: none; /* Safari */
+   -khtml-user-select: none; /* Konqueror HTML */
+   -moz-user-select: none; /* Firefox */
+   -ms-user-select: none; /* Internet Explorer/Edge */
 }
 
 .boxed-info-list::-webkit-scrollbar {
   display: none;
 }
 
+.boxed-info-list:active {
+    cursor: grabbing;
+}
+
 .boxed-info {
   font-family: 'Lato';
-
-  cursor: grab;
 
   display: inline-block;
   width: 500px;
