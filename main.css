@@ -1,7 +1,22 @@
-@import url('https://fonts.googleapis.com/css?family=Nunito:400,700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Lato:400,700&display=swap');
+
+@font-face {
+  font-family: 'Century Schoolbook';
+  src: url('fonts/CenturySchL-Roma.woff2') format('woff2'),
+       url('fonts/CenturySchL-Roma.woff') format('woff');
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: 'Century Schoolbook';
+  src: url('fonts/CenturySchL-Bold.woff2') format('woff2'),
+       url('fonts/CenturySchL-Bold.woff') format('woff');
+  font-weight: bold;
+}
 
 html, body {
   margin: 0;
+  -webkit-font-smoothing: antialiased;
   /* font-size: 1em; */
 }
 
@@ -36,7 +51,7 @@ content {
 .form__email {
   width: calc(100% - 14rem);
   float: left;
-  font-family: 'Nunito';
+  font-family: 'Lato';
   padding:1rem;
   font-size: 1rem;
 }
@@ -74,7 +89,7 @@ header {
 
 
 .btn {
-  font-family: 'Nunito';
+  font-family: 'Lato';
   text-transform: uppercase;
   color: white;
   background: #CEAC99;
@@ -129,7 +144,7 @@ header {
 }
 
 .text--body {
-  font-family: 'Nunito';
+  font-family: 'Lato';
   font-size: 1.5rem;
   line-height: 2rem;
   color: #707070;
