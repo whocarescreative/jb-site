@@ -391,15 +391,6 @@ content {
 
 /* #endregion dropdown */
 
-.form__email {
-  width: calc(100% - 8rem);
-}
-
-.form__btn {
-  width: 8rem;
-}
-  
-
 @media screen and (max-width: 900px) {
   content {
     grid-template-columns: 0rem 2rem 1fr 2rem 0rem;
