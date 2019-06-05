@@ -176,15 +176,13 @@ header {
 }
 
 .grey-section {
-  /* width: 100%; */
-  display: grid;
   
-  grid-template-columns: 1fr 1fr 1fr;
   grid-column: -1/1;
-  padding: 4rem;
-    min-height: 500px;
-    position: relative;
+  min-height: 500px;
+  position: relative;
   background-color: #F7F7F7;
+
+  
 }
 
 .text--raised {
@@ -198,15 +196,29 @@ header {
 }
 
 .grey-section__wrap {
-  grid-column: 1 / -1;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  white-space: nowrap;
+
+  scroll-snap-type: x mandatory;
+
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.grey-section__wrap::-webkit-scrollbar {
+  display: none;
 }
 
 .grey-section__child {
-  height:100%;
-  /* width: 10%; */
-  display: inline;
-  z-index: 9;
-  border: 3px solid black;
+  display: inline-block;
+  width: 500px;
+  height: 100%;
+
+  margin: 50px;
+  border: 1px solid black;
+
+  scroll-snap-align: center;
 }
 
 .grid-col-2 {
