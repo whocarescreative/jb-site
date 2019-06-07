@@ -71,6 +71,10 @@ html, body {
   text-transform: uppercase;
 }
 
+.text--normal {
+  font-weight: normal;
+}
+
 .bg-grey {
   background-color: var(--color-light-grey);
 }
@@ -78,8 +82,6 @@ html, body {
 .bg-dark {
   background-color: var(--color-dark-grey);
 }
-
-
 
 .mb-1 {
   margin-bottom: 1rem;
@@ -99,6 +101,10 @@ html, body {
 
 .mb-5 {
   margin-bottom: 5rem;
+}
+
+.mt-0 {
+  margin-top: 0;
 }
 
 .mt-1 {
