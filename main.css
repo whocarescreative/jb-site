@@ -93,6 +93,14 @@ html, body {
   margin-bottom: 3rem;
 }
 
+.mb-4 {
+  margin-bottom: 4rem;
+}
+
+.mb-5 {
+  margin-bottom: 5rem;
+}
+
 .mt-1 {
   margin-top: 1rem;
 }
@@ -104,6 +112,8 @@ html, body {
 .mt-3 {
   margin-top: 3rem;
 }
+
+
 
 
 
@@ -182,12 +192,14 @@ content {
   grid-template-rows: auto;
   grid-template-columns: 
     minmax(4rem, 1fr) 
-    4rem
+    8rem
     minmax(auto, 900px)  
-    4rem
+    8rem
     minmax(4rem, 1fr);
   color: var(--color-text);
 }
+
+
 
 .btn {
   font-family: var(--font-primary);
@@ -332,9 +344,8 @@ content {
 }
 
 .grey-section__title {
-  position: absolute;
-  top:-2rem;
-  grid-column: 3 / 4;
+  margin-top:-6rem;
+  grid-column: 2 / 4;
 }
 
 .grey-section__text {
@@ -384,7 +395,7 @@ content {
   flex-direction: column;
   align-items: stretch;
   vertical-align: top;
-  width: calc(calc(100% - 18rem)/3);
+  width: calc(calc(100% - 16rem)/3);
   max-width: 100%;
   white-space: normal;
 
@@ -468,7 +479,8 @@ content {
   }
 
   .grey-section__title {
-    top:-1.25rem;
+    grid-column: 3 / 4;
+    margin-top:-5.25rem;
   }
 
   .btn {
