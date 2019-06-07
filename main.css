@@ -199,8 +199,6 @@ content {
   color: var(--color-text);
 }
 
-
-
 .btn {
   font-family: var(--font-primary);
   text-transform: uppercase;
@@ -211,6 +209,7 @@ content {
   font-size: 1.25rem;
   cursor: pointer;
   display: inline-block;
+  text-decoration: none;
 }
 
 .btn--white {
