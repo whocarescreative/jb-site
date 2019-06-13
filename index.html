@@ -15,7 +15,7 @@
 
     <body>
         <nav>
-            <img class="" src="img/aohb.png"/>
+            <img class="logo" src="img/aohb.png"/>
         </nav>
         <header class="mb-4">
             <img alt="Professional photo of Jana Boyko" class="header--img" src="img/header.jpeg"/>
@@ -353,7 +353,7 @@
         </div>
         <div class="footer py-2">
             <div class="footer__text footer__text--flex">
-                <img class="footer__logo" src="img/aohb.png"/>
+                <img class="logo footer__logo" src="img/aohb.png"/>
                 <a href="#/" class="footer__jump-to-top text--sm text--bold text--uppercase">Jump To Top</a>
             </div>
         </div>
@@ -372,38 +372,38 @@
             }
             // #endregion
 
-            // #region drag input for box list section
-            function is_touch_device() {
-                return (('ontouchstart' in window)
-                    || (navigator.MaxTouchPoints > 0)
-                    || (navigator.msMaxTouchPoints > 0));
-            }
+            // // #region drag input for box list section
+            // function is_touch_device() {
+            //     return (('ontouchstart' in window)
+            //         || (navigator.MaxTouchPoints > 0)
+            //         || (navigator.msMaxTouchPoints > 0));
+            // }
 
-            if (!is_touch_device()) {
-                let currentDragElement = null;
+            // if (!is_touch_device()) {
+            //     let currentDragElement = null;
 
-                document.body.addEventListener('mousemove', e => {
-                    if (currentDragElement) {
-                        currentDragElement.scrollLeft = currentDragElement.scrollLeft - e.movementX;
-                    }
-                });
+            //     document.body.addEventListener('mousemove', e => {
+            //         if (currentDragElement) {
+            //             currentDragElement.scrollLeft = currentDragElement.scrollLeft - e.movementX;
+            //         }
+            //     });
 
-                for (const el of document.getElementsByClassName('boxed-info-list')) {
-                    el.style.scrollSnapType = 'none';
+            //     for (const el of document.getElementsByClassName('boxed-info-list')) {
+            //         el.style.scrollSnapType = 'none';
 
-                    el.addEventListener('mousedown', e => {
-                        currentDragElement = el;
-                        currentDragElement.focus();
-                    });
-                    el.addEventListener('mouseup', e => {
-                        currentDragElement = null;
-                    });
-                    el.addEventListener('mouseleave', e => {
-                        currentDragElement = null;
-                    });
-                }  
-            }
-            // #endregion
+            //         el.addEventListener('mousedown', e => {
+            //             currentDragElement = el;
+            //             currentDragElement.focus();
+            //         });
+            //         el.addEventListener('mouseup', e => {
+            //             currentDragElement = null;
+            //         });
+            //         el.addEventListener('mouseleave', e => {
+            //             currentDragElement = null;
+            //         });
+            //     }  
+            // }
+            // // #endregion
 
             const jumpToTopEl = document.getElementsByClassName('footer__jump-to-top')[0];
             jumpToTopEl.addEventListener('click', () => window.scrollTo({top: 0, behavior: 'smooth'}));
