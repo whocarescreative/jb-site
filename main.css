@@ -184,6 +184,11 @@ header {
 /*#endregion Header*/
 
 /*#region Content*/
+
+.logo {
+  height: 50px;
+}
+
 nav {
   height:4rem;
   width: 100%;
