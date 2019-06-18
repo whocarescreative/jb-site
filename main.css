@@ -162,10 +162,7 @@ textarea, input {
 
 header {
   height: calc(100vh);
-  display: grid;
   position: relative;
-  grid-template-columns: 55% 25rem 16rem;
-  /* grid-template-rows: 20% 10% 20%; */
   overflow: hidden;
 }
 
@@ -181,9 +178,9 @@ header {
 }
 
 .header__blurb {
-  grid-column-start: 2;
-  grid-column-end: span 1;
-  grid-row-start: 2;
+  margin-left: 55%;
+  margin-top: 22rem;
+  width: 25rem;
 }
 
 .btn.header__cta {
@@ -204,7 +201,6 @@ nav {
   width: 100%;
   box-sizing: border-box;
   padding: 0.8rem 5.5rem;
-  display: flex;
 }
 
 content {
@@ -499,6 +495,25 @@ content {
 /* #endregion dropdown */
 
 @media screen and (max-width: 900px) {
+  .header--img {
+    position: relative;
+    height: 48vh;
+
+    border: none;
+    
+    object-fit: cover;
+    object-position: bottom center;
+  }
+  
+  .header__blurb {
+    margin: 2rem;
+  }
+
+  nav {
+      text-align: right;
+      padding: 2rem 2rem;
+  }
+
   content {
     grid-template-columns: 0rem 2rem 1fr 2rem 0rem;
   }
@@ -539,18 +554,23 @@ content {
   }
 
   .btn {
-    padding: 1rem 1rem;
-    font-size: 1rem;
+    padding: 1.3rem 1.3rem;
+    font-size: 1.3rem;
+  }
+
+  .text--header {
+    font-size: 3rem;
+    line-height: 3.5rem;
   }
 
   .text--lg {
-    font-size: 2rem;
-    line-height: 2.5rem;
+    font-size: 2.5rem;
+    line-height: 3rem;
   }
 
   .text--body {
-    font-size: 1rem;
-    line-height: 1.5rem;
+    font-size: 1.5rem;
+    line-height: 2rem;
   }
 
   .text--sm  {
