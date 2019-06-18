@@ -239,6 +239,7 @@ content {
 .text-section {
   grid-column-start: 3;
   grid-column-end: span 1;
+  margin-bottom: 8rem;
 }
 
 .collage {
@@ -510,6 +511,7 @@ content {
   
   .header__blurb {
     margin: 2rem;
+    width: 18rem;
     
     grid-row: 2 / span 1;
   }
@@ -569,18 +571,18 @@ content {
   }
 
   .text--lg {
-    font-size: 2.5rem;
-    line-height: 3rem;
+    font-size: 2.3rem;
+    line-height: 2.8rem;
   }
 
   .text--body {
-    font-size: 1.5rem;
-    line-height: 2rem;
+    font-size: 1.4rem;
+    line-height: 1.9rem;
   }
 
   .text--sm  {
-    font-size: 0.85rem;
-    line-height: 1.25rem;
+    font-size: 1.1rem;
+    line-height: 1.6rem;
   }
 
   .boxed-info-list {
