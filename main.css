@@ -17,7 +17,7 @@
 :root {  
   --font-primary: 'Lato';
   --font-secondary: 'Century Schoolbook';
-  --color-text: #707070;
+  --color-text: #4A4A4A;
   --color-highlight: #DD8A78;
   --color-light-grey: #F7F7F7;
   --color-dark-grey: #343434;
@@ -35,8 +35,8 @@ html, body {
 
 .text--lg {
   font-family: var(--font-secondary);
-  font-size: 3rem;
-  line-height: 3.5rem;
+  font-size: 4rem;
+  line-height: 4.5rem;
 }
 
 .text--body {
@@ -156,10 +156,10 @@ html, body {
 /*#region Header*/
 
 header {
-  height: calc(100vh - 4rem);
+  height: calc(100vh);
   display: grid;
   position: relative;
-  grid-template-columns: 55% auto 16rem;
+  grid-template-columns: 55% 25rem 16rem;
   /* grid-template-rows: 20% 10% 20%; */
   overflow: hidden;
 }
@@ -167,8 +167,11 @@ header {
 .header--img {
   position: absolute;
   z-index: -1;
-  width: 100%;    
-  height: 100%;    
+  width: 100%;
+  height: 100%;
+  border: 5rem solid white;
+  box-sizing: border-box;
+  
   object-fit: cover;
 }
 
@@ -191,12 +194,12 @@ header {
 }
 
 nav {
-  height:4rem;
+  position: absolute;
+  height:5rem;
   width: 100%;
-  position: relative;
+  box-sizing: border-box;
+  padding: 0.8rem 5.5rem;
   display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
 content {
