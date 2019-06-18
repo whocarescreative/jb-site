@@ -348,13 +348,13 @@ content {
   height: 50px;
 }
 
-
 .form {
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr auto;
 }
 
 .form__email {
-  width: calc(100% - 10rem);
+  /* width: calc(100% - 10rem); */
   float: left;
   font-family: 'Lato';
   padding:1rem;
@@ -362,10 +362,6 @@ content {
   font-size: 1rem;
 }
 
-.form__btn {
-  width: 10rem;
-}
-  
 /*#endregion Footer*/
 
 .grey-section {
@@ -600,8 +596,7 @@ content {
   }
 
   .boxed-info-list {
-    /* grid-column: 2/-1;   */
-    padding:0 2rem;
+    padding: 0 2rem;
   }
 
   /* I am sorry, but not really. Because CSS is garbage, and display:flex loses the right padding of the boxedinfolist */
@@ -609,13 +604,5 @@ content {
 
   .boxed-info {
     width: calc(100% - 6rem);
-  }
-
-  .form__email {
-    width: calc(100% - 8rem);
-  }
-  
-  .form__btn {
-    width: 8rem;
   }
 }
