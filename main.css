@@ -33,10 +33,16 @@ html, body {
 
 /*#region Global*/
 
-.text--lg {
+.text--header {
   font-family: var(--font-secondary);
   font-size: 4rem;
   line-height: 4.5rem;
+}
+
+.text--lg {
+  font-family: var(--font-secondary);
+  font-size: 2.5rem;
+  line-height: 3rem;
 }
 
 .text--body {
@@ -247,7 +253,7 @@ content {
   /* grid-row: 1 / ; */
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-gap: 3rem;
+  grid-gap: 3.5rem;
   
   grid-template-rows: 
     30px auto 30px
