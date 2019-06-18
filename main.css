@@ -18,7 +18,7 @@
   --font-primary: 'Lato';
   --font-secondary: 'Century Schoolbook';
   --color-text: #707070;
-  --color-highlight: #CEAC99;
+  --color-highlight: #DD8A78;
   --color-light-grey: #F7F7F7;
   --color-dark-grey: #343434;
   --color-border: #CDCDCD;
@@ -27,6 +27,7 @@
 
 html, body {
   margin: 0;
+  font-size: 14px;
   -webkit-font-smoothing: antialiased;
 }
 
@@ -229,18 +230,6 @@ content {
   background: transparent;
 }
 
-.collage {
-  grid-column-end: span 2;
-}
-
-.collage--left {
-  grid-column-start: 2;
-}
-
-.collage--right {
-  grid-column-start: 3;
-}
-
 .text-section {
   grid-column-start: 3;
   grid-column-end: span 1;
@@ -252,40 +241,7 @@ content {
   position: relative;
 }
 
-.fact__title {
-  top:-2.5rem;
-  position: absolute;
-  z-index: 2;
-}
 
-.fact:before {
-  background: none;
-  border: 2px solid var(--color-border);
-  content: "";
-  display: block;
-  position: absolute;
-  top: 4px;
-  z-index: -1;
-  left: 4px;
-  right: 4px;
-  bottom: 4px;
-  pointer-events: none;
-}
-.text-section--raised {
-  background-color: white;
-  padding: 4rem;
-  margin-top: -4em;
-}
-
-.collage__img {
-  height: 500px;
-  width: 100%;
-  object-fit: cover;
-}
-
-.text--raised {
-  margin-top: -4.5rem;
-}
 /*#endregion Content*/
 
 /*#region Footer*/
@@ -402,18 +358,19 @@ content {
 
 .boxed-info {
   font-family: var(--font-primary);
+  /* background: var(--color-light-grey); */
   cursor: grab;
   display: inline-flex;
   flex-shrink: 0;
   flex-direction: column;
   align-items: stretch;
   vertical-align: top;
-  width: calc(calc(100% - 16rem)/3);
+  width: calc(calc(100% - 19rem)/3);
   max-width: 100%;
   white-space: normal;
 
-  border: 2px solid var(--color-border);
-  padding: 2rem;
+  border: 1px solid var(--color-border);
+  padding: 2.5rem;
   margin-right: 2rem;
 
   scroll-snap-align: center;
@@ -515,29 +472,6 @@ content {
   .text--sm  {
     font-size: 0.85rem;
     line-height: 1.25rem;
-  }
-
-  .collage {
-    grid-column-end: -1;
-  }
-
-  .collage__img {
-    height: 400px;
-  }
-
-  .collage--left, .collage--right {
-    grid-column-start: 2;
-  }
-
-
-  .text-section--raised {
-    padding: 2rem;
-    /* grid-column: 2 / span 3; */
-    margin-top: -4rem;
-  }
-
-  .fact__title {
-    top: -1.75rem;
   }
 
   .boxed-info-list {
