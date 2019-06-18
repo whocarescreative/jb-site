@@ -161,9 +161,11 @@ textarea, input {
 /*#region Header*/
 
 header {
-  height: calc(100vh);
+  height: 100vh;
   position: relative;
   overflow: hidden;
+  display: grid;
+  grid-template-rows: 1fr auto;
 }
 
 .header--img {
@@ -497,16 +499,19 @@ content {
 @media screen and (max-width: 900px) {
   .header--img {
     position: relative;
-    height: 48vh;
 
     border: none;
     
     object-fit: cover;
     object-position: bottom center;
+
+    grid-row: 1 / span 1;
   }
   
   .header__blurb {
     margin: 2rem;
+    
+    grid-row: 2 / span 1;
   }
 
   nav {
