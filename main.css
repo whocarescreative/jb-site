@@ -495,6 +495,27 @@ content {
     grid-template-columns: 0rem 2rem 1fr 2rem 0rem;
   }
 
+  .collage {
+    grid-column: 1 / -1;
+    grid-gap: 2rem;
+    grid-template-columns: 1fr;
+    grid-template-rows:repeat(6, auto);
+  }
+
+  .collage__img {
+    position: relative;
+    height: 350px;
+  }
+
+  .collage__text {
+    padding: 0 2rem;
+  }
+  
+  .collage__child {
+    grid-column: 1;
+    grid-row: span 1;
+  }
+
   .grey-section {
     grid-template-columns: 0rem 2rem 1fr 2rem 0rem;
     border: none;
