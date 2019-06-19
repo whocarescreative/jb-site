@@ -34,8 +34,8 @@
                     We work together to plan your transition into entrepreneurship and build your business from the ground up, always ensuring you are deeply supported in the process.                </div>
             </div>
 
-            <div class="collage mb-5">
-                <div class="collage__child collage__child1">
+            <div class="collage">
+                <div class="collage__child collage__child1 collage__image-child">
                     <img src="img/together.jpeg" style="object-position: center 30%" class="collage__img"/>
                 </div>
                 <div class="collage__child collage__text collage__child2">
@@ -47,7 +47,7 @@
                     </div>
                     
                 </div>
-                <div class="collage__child collage__child3">
+                <div class="collage__child collage__child3 collage__image-child">
                     <img src="img/computer.jpeg" class="collage__img"/>
                 </div>
                 <div class="collage__child collage__text collage__child4">
@@ -59,7 +59,7 @@
                     </div>
                     <a href="https://calendly.com/janaboyko/coachingsession" class="btn btn--primary">Let's chat</a>
                 </div>
-                <div class="collage__child collage__child5">
+                <div class="collage__child collage__child5 collage__image-child">
                     <img src="img/jana-sitting.jpeg" style="object-position: center top" class="collage__img"/>
                 </div>
                 <div class="collage__child collage__text collage__child6 ">
@@ -355,41 +355,68 @@
             }
             // #endregion
 
-            // // #region drag input for box list section
-            // function is_touch_device() {
-            //     return (('ontouchstart' in window)
-            //         || (navigator.MaxTouchPoints > 0)
-            //         || (navigator.msMaxTouchPoints > 0));
-            // }
-
-            // if (!is_touch_device()) {
-            //     let currentDragElement = null;
-
-            //     document.body.addEventListener('mousemove', e => {
-            //         if (currentDragElement) {
-            //             currentDragElement.scrollLeft = currentDragElement.scrollLeft - e.movementX;
-            //         }
-            //     });
-
-            //     for (const el of document.getElementsByClassName('boxed-info-list')) {
-            //         el.style.scrollSnapType = 'none';
-
-            //         el.addEventListener('mousedown', e => {
-            //             currentDragElement = el;
-            //             currentDragElement.focus();
-            //         });
-            //         el.addEventListener('mouseup', e => {
-            //             currentDragElement = null;
-            //         });
-            //         el.addEventListener('mouseleave', e => {
-            //             currentDragElement = null;
-            //         });
-            //     }  
-            // }
-            // // #endregion
-
             const jumpToTopEl = document.getElementsByClassName('footer__jump-to-top')[0];
             jumpToTopEl.addEventListener('click', () => window.scrollTo({top: 0, behavior: 'smooth'}));
+
+            //animations and parallax
+            let mql = window.matchMedia('(max-width: 900px)');
+
+            const heroImageEl = document.getElementsByClassName('header--img')[0];
+            const leftCollageColumnEls = [
+                document.getElementsByClassName('collage__child1')[0],
+                document.getElementsByClassName('collage__child4')[0],
+                document.getElementsByClassName('collage__child5')[0]
+            ];
+            const rightCollageColumnEls = [
+                document.getElementsByClassName('collage__child2')[0],
+                document.getElementsByClassName('collage__child3')[0],
+                document.getElementsByClassName('collage__child6')[0]
+            ];
+            const collageImageEls = document.getElementsByClassName('collage__img');
+            const largePhotoEl = document.getElementsByClassName('large-photo-section__img')[0];
+            const smallPhotoEl = document.getElementsByClassName('small-photo-section__img')[0];
+
+            
+            function animationLoop() {
+                requestAnimationFrame(animationLoop);
+
+                heroImageEl.style.opacity = `${Math.max(1 - getScrollPercent()/14, 0)}`;
+
+                largePhotoEl.style.transform = `translate(0,${(getScrollPercent()-75)*4}px)`;
+
+                if (!mql.matches) {
+                    for (const el of leftCollageColumnEls) {
+                        el.style.transform = `translate(0,${-(getScrollPercent()-30)*4}px)`;
+                    }
+                    for (const el of rightCollageColumnEls) {
+                        el.style.transform = `translate(0,${(getScrollPercent()-30)*4}px)`;
+                    }
+                    for (const el of collageImageEls) {
+                        el.style.transform = `translate(0,0)`;
+                    }
+                } else {
+                    for (const el of leftCollageColumnEls) {
+                        el.style.transform = `translate(0,0)`;
+                    }
+                    for (const el of rightCollageColumnEls) {
+                        el.style.transform = `translate(0,0)`;
+                    }
+                    let i = 0;
+                    for (const el of collageImageEls) {
+                        el.style.transform = `translate(0,${(getScrollPercent()-30-(i*5))*6}px)`;
+                        i++;
+                    }
+                }
+            }
+            requestAnimationFrame(animationLoop);
+
+            function getScrollPercent() {
+                var h = document.documentElement,
+                    b = document.body,
+                    st = 'scrollTop',
+                    sh = 'scrollHeight';
+                return (h[st]||b[st]) / ((h[sh]||b[sh]) - h.clientHeight) * 100;
+            }
         </script>
     </body>
 </html>
