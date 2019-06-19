@@ -533,6 +533,11 @@ content {
   nav {
       justify-content: flex-end;
       padding: 2rem;
+      height: auto;
+  }
+
+  .logo {
+    height: 40px;
   }
 
   content {
