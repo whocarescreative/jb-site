@@ -14,13 +14,13 @@
 
 @font-face {
   font-family: 'Lato';
-  src: url('fonts/Lato-Regular.ttf') format('ttf');
+  src: url('fonts/Lato-Regular.ttf') format('truetype');
   font-weight: normal;
 }
 
 @font-face {
   font-family: 'Lato';
-  src: url('fonts/Lato-Bold.ttf') format('ttf');
+  src: url('fonts/Lato-Bold.ttf') format('truetype');
   font-weight: bold;
 }
 
@@ -372,6 +372,10 @@ content {
   grid-gap: 0.5rem;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: auto;
+}
+
+.form input {
+  min-width: 0;
 }
 
 .form__email__label {
