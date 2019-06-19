@@ -1,5 +1,3 @@
-@import url('https://fonts.googleapis.com/css?family=Lato:400,700&display=swap');
-
 @font-face {
   font-family: 'Century Schoolbook';
   src: url('fonts/CenturySchL-Roma.woff2') format('woff2'),
@@ -11,6 +9,18 @@
   font-family: 'Century Schoolbook';
   src: url('fonts/CenturySchL-Bold.woff2') format('woff2'),
        url('fonts/CenturySchL-Bold.woff') format('woff');
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: 'Lato';
+  src: url('fonts/Lato-Regular.ttf') format('ttf');
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: 'Lato';
+  src: url('fonts/Lato-Bold.ttf') format('ttf');
   font-weight: bold;
 }
 
