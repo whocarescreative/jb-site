@@ -326,8 +326,7 @@ content {
 }
 
 .small-photo-section__img {
-  grid-column: span 1;
-  height: 350px;
+  height: 60vh;
   width: 100%;
   object-fit: cover;
 }
@@ -629,7 +628,7 @@ content {
   }
   
   .small-photo-section__img {
-    height: 250px;
+    height: 350px;
   }
 
   .small-photo-section__text {
