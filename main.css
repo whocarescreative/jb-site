@@ -339,8 +339,7 @@ content {
 }
 
 .footer__text {
-  grid-column-start: 3;
-  grid-column-end: span 1;
+  grid-column: 3 / span 1;
 }
 
 .footer__text--flex {
@@ -355,13 +354,46 @@ content {
 
 .form {
   display: grid;
-  grid-template-columns: 1fr auto;
+  grid-gap: 0.5rem;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto;
 }
 
+.form__email__label {
+  font-family: var(--font-primary);
+  grid-column: 1 / span 2;
+  font-size: 1rem;
+}
 .form__email {
-  /* width: calc(100% - 10rem); */
-  float: left;
-  font-family: 'Lato';
+  padding:1rem;
+  border: 1px solid var(--color-border) !important;
+  font-size: 1rem;
+  grid-column: 1 / span 2;
+}
+
+.form__btn {
+  grid-column: 1 / span 2;
+}
+
+.form__first-name__label {
+  font-family: var(--font-primary);
+  grid-column: 1 / span 1;
+  font-size: 1rem;
+}
+.form__first-name {
+  grid-column: 1 / span 1;
+  padding:1rem;
+  border: 1px solid var(--color-border) !important;
+  font-size: 1rem;
+}
+
+.form__last-name__label {
+  font-family: var(--font-primary);
+  grid-column: 2 / span 1;
+  font-size: 1rem;
+}
+.form__last-name {
+  grid-column: 2 / span 1;
   padding:1rem;
   border: 1px solid var(--color-border) !important;
   font-size: 1rem;
