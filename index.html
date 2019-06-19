@@ -380,7 +380,7 @@
             function animationLoop() {
                 requestAnimationFrame(animationLoop);
 
-                heroImageEl.style.opacity = `${Math.max(1 - getScrollPercent()/14, 0)}`;
+                heroImageEl.style.opacity = `${Math.max(1 - getScrollPercent()/8, 0)}`;
 
                 largePhotoEl.style.transform = `translate(0,${(getScrollPercent()-75)*4}px)`;
 

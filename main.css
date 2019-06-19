@@ -253,11 +253,11 @@ content {
 .text-section {
   grid-column-start: 3;
   grid-column-end: span 1;
-  margin-bottom: 8rem;
+  margin-bottom: 16rem;
 }
 
 .collage {
-  padding-bottom: 6rem;
+  padding-bottom: 10rem;
 
   grid-column: 3 / span 1;
   /* grid-row: 1 / ; */
@@ -442,6 +442,8 @@ content {
   
   padding: 4rem 0;
   border: 2rem solid white;
+  border-top: none;
+  border-bottom: none;
 }
 
 .grey-section__title {
@@ -593,6 +595,10 @@ content {
 
   content {
     grid-template-columns: 0rem 2rem 1fr 2rem 0rem;
+  }
+
+  .text-section {
+    margin-bottom: 6rem;
   }
 
   .footer {
