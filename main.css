@@ -27,6 +27,7 @@
 
 html, body {
   margin: 0;
+  height: 100%;
   font-size: 14px;
   -webkit-font-smoothing: antialiased;
 }
@@ -161,7 +162,7 @@ textarea, input {
 /*#region Header*/
 
 header {
-  height: 100vh;
+  height: 100%;
   position: relative;
   overflow: hidden;
   display: grid;
@@ -195,6 +196,7 @@ header {
 /*#region Content*/
 
 .logo {
+  margin-top: 0.5vw;
   height: 3vw;
 }
 
@@ -202,7 +204,6 @@ nav {
   position: absolute;
   display: flex;
   align-items: center;
-  height: 4vw;
   width: 100%;
   box-sizing: border-box;
   padding: 0 4vw;
@@ -414,13 +415,6 @@ content {
   -ms-overflow-style: none;
 
   padding: 0 4rem;
-
-  cursor: grab;
-  user-select: none; /* supported by Chrome and Opera */
-   -webkit-user-select: none; /* Safari */
-   -khtml-user-select: none; /* Konqueror HTML */
-   -moz-user-select: none; /* Firefox */
-   -ms-user-select: none; /* Internet Explorer/Edge */
 }
 
 .boxed-info-list::-webkit-scrollbar {
