@@ -382,14 +382,15 @@
 
                 heroImageEl.style.opacity = `${Math.max(1 - getScrollPercent()/8, 0)}`;
 
-                largePhotoEl.style.transform = `translate(0,${(getScrollPercent()-75)*4}px)`;
+                largePhotoEl.style.transform = `translate(0,${(getScrollPercent()-75)*5}px)`;
+                smallPhotoEl.style.transform = `translate(0,${(getScrollPercent()-75)*4}px)`;
 
                 if (!mql.matches) {
                     for (const el of leftCollageColumnEls) {
-                        el.style.transform = `translate(0,${-(getScrollPercent()-30)*4}px)`;
+                        el.style.transform = `translate(0,${-(getScrollPercent()-30)*3}px)`;
                     }
                     for (const el of rightCollageColumnEls) {
-                        el.style.transform = `translate(0,${(getScrollPercent()-30)*4}px)`;
+                        el.style.transform = `translate(0,${(getScrollPercent()-30)*3}px)`;
                     }
                     for (const el of collageImageEls) {
                         el.style.transform = `translate(0,0)`;
@@ -415,8 +416,12 @@
                     b = document.body,
                     st = 'scrollTop',
                     sh = 'scrollHeight';
+                console.log((h[st]||b[st]) / ((h[sh]||b[sh]) - h.clientHeight) * 100);
                 return (h[st]||b[st]) / ((h[sh]||b[sh]) - h.clientHeight) * 100;
             }
+
+
+
         </script>
     </body>
 </html>
