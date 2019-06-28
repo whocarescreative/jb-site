@@ -5,6 +5,11 @@
 }
 @font-face {
     font-family: 'Butler';
+    src: url('fonts/Butler_Medium.otf') format('opentype');
+    font-weight: medium;
+}
+@font-face {
+    font-family: 'Butler';
     src: url('fonts/Butler_Bold.otf') format('opentype');
     font-weight: bold;
 }
