@@ -79,8 +79,23 @@
                 </div>
             </div>
 
+            <div class="white-section main-grid-template">
+                <div class="text--huge main-grid-template__title mb-2">Word on the street</div>
+                <div class="quote__wrapper">
+                    <div class="quote__wrapper__quote-symbol">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" viewBox="0 0 35 35">
+                            <path id="Path_11" data-name="Path 11" d="M-2.793-59.414l1.25,1.641a22.362,22.362,0,0,0-5.684,5.508,9,9,0,0,0-1.816,4.727q0,1.328.938,1.328l.391-.039a6.675,6.675,0,0,1,1.563-.234A3.962,3.962,0,0,1-3.2-45.215a4.342,4.342,0,0,1,1.23,3.145,5.121,5.121,0,0,1-1.309,3.535A3.959,3.959,0,0,1-6.309-37.07,5.792,5.792,0,0,1-10.723-39.2a7.953,7.953,0,0,1-1.914-5.527Q-12.637-52.891-2.793-59.414Zm16.016,0,1.289,1.646a22.389,22.389,0,0,0-5.684,5.524A9.04,9.04,0,0,0,7.012-47.5q0,1.332.9,1.332l.391-.039a7.075,7.075,0,0,1,1.563-.234,4.014,4.014,0,0,1,2.988,1.265,4.315,4.315,0,0,1,1.23,3.132,5.044,5.044,0,0,1-1.328,3.52A3.987,3.987,0,0,1,9.746-37.07,5.771,5.771,0,0,1,5.313-39.2a8,8,0,0,1-1.895-5.527Q3.418-52.891,13.223-59.414Z" transform="translate(12.637 59.414)" fill="#4A4A4A"></path>
+                        </svg>
+                    </div>
+                    <quote class="quote__wrapper__quote-text">Jana is a tremendous business coach with a true passion for her work and clients. She empowered us through all
+                        stages in our business development and helped us turn our idea into a viable business through her strategic
+                        capabilities and heart-centred approach to coaching. She created a powerful space for us expand and grow as
+                        entrepreneurs and she is a phenomenal source of strength and light for women in business.</quote>
+                </div>
+            </div>
+
             <div class="grey-section main-grid-template mb-4">
-                <div class="text--lg grey-section__title mb-2">Word on the street</div>
+                <div class="text--huge main-grid-template__title mb-2">I support you through the transition and beyond</div>
                 <div class="boxed-info-list text--sm dragscroll">
                     <div class="boxed-info">
                         <div class="boxed-info__text">
@@ -140,8 +155,27 @@
                 </div>
             </div>
 
+            <div class="white-section main-grid-template">
+                <div class="text--huge main-grid-template__title mb-2">Here's what you'll create</div>
+                <ul class="main-grid-template__text main-grid-template__text--list text--body">
+                    <li>Establish a powerful, <b>purpose-driven</b> vision for your life and business</li>
+                    <li><b>Crystallize your idea</b> and build sound strategy around your <b>business model</b></li>
+                    <li><b>Clear and reconcile</b> emotional and financial blocks that keep you small</li>
+                    <li>Build <b>unwavering confidence</b> in yourself and your business</li>
+                </ul>
+            </div>
+
+            <div class="photo-section main-grid-template">
+                <img src="img/computer2.jpeg" class="photo-section__img"></img>
+                <div class="text--huge mb-2 photo-section__text">
+                    <p class="mb-2">Ready to transform from employee to entrepreneur?</p>
+                    <a href="https://calendly.com/janaboyko/coachingsession" class="btn header__cta">SCHEDULE A COMPLIMENTARY CALL</a>
+                </div>
+                
+            </div>
+
             <div class="grey-section main-grid-template">
-                <div class="text--lg grey-section__title mb-2">FAQ</div>
+                <div class="text--huge main-grid-template__title mb-2">FAQ</div>
                 <div class="grey-section__text">
                     <div class="mb-1 dropdown text--body dropdown-closed">          
                         <div class="dropdown__line">
@@ -280,7 +314,7 @@
                 </div>
             </div>
         </div>
-        <div class="footer py-2">
+        <div class="main-grid-template py-2">
             <div class="footer__text footer__text--flex">
                 <img class="logo footer__logo" src="img/aohb.png" alt="all of her BUSINESS logo"/>
                 <a href="#/" class="footer__jump-to-top text--sm text--bold text--uppercase">Jump To Top</a>
@@ -307,7 +341,6 @@
             //animations and parallax
             let mql = window.matchMedia('(max-width: 900px)');
 
-            const heroImageEl = document.getElementsByClassName('header--img')[0];
             const leftCollageColumnEls = [
                 document.getElementsByClassName('collage__child1')[0],
                 document.getElementsByClassName('collage__child4')[0],
@@ -325,8 +358,6 @@
             
             function animationLoop() {
                 requestAnimationFrame(animationLoop);
-
-                heroImageEl.style.opacity = `${Math.max(1 - getScrollPercent()/8, 0)}`;
 
                 largePhotoEl.style.transform = `translate(0,${(getScrollPercent()-75)*5}px)`;
                 smallPhotoEl.style.transform = `translate(0,${(getScrollPercent()-75)*4}px)`;

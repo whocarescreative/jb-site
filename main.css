@@ -1,15 +1,17 @@
 @font-face {
-  font-family: 'Century Schoolbook';
-  src: url('fonts/CenturySchL-Roma.woff2') format('woff2'),
-       url('fonts/CenturySchL-Roma.woff') format('woff');
-  font-weight: normal;
+    font-family: 'Butler';
+    src: url('fonts/Butler_Regular.otf') format('opentype');
+    font-weight: normal;
 }
-
 @font-face {
-  font-family: 'Century Schoolbook';
-  src: url('fonts/CenturySchL-Bold.woff2') format('woff2'),
-       url('fonts/CenturySchL-Bold.woff') format('woff');
-  font-weight: bold;
+    font-family: 'Butler';
+    src: url('fonts/Butler_Bold.otf') format('opentype');
+    font-weight: bold;
+}
+@font-face {
+    font-family: 'Butler';
+    src: url('fonts/Butler_Light.otf') format('opentype');
+    font-weight: lighter;
 }
 
 @font-face {
@@ -26,7 +28,7 @@
 
 :root {  
   --font-primary: 'Lato';
-  --font-secondary: 'Century Schoolbook';
+  --font-secondary: 'Butler';
   --color-text: #4A4A4A;
   --color-orange: #DD8A78;
   --color-light-grey: #F7F7F7;
@@ -54,7 +56,12 @@ html, body {
   font-family: var(--font-secondary);
   font-size: 2.5rem;
   line-height: 3rem;
-  font-weight: bold;
+}
+
+.text--huge {
+  font-family: var(--font-secondary);
+  font-size: 3rem;
+  line-height: 4rem;
 }
 
 .text--body {
@@ -384,14 +391,70 @@ content {
   grid-column: 1 / -1;
   position: relative;
   background-color: var(--color-light-grey);
-
-  font-size: 1.25rem;
-  line-height: 1.6rem;
   
   padding: 4rem 0;
 }
 
-.grey-section__title {
+.photo-section {
+  grid-column: 1 / -1;
+  position: relative;
+  text-align: center;
+
+  height: 90vh;
+
+  color: white;
+}
+
+.photo-section__img {
+  z-index: -10;
+  filter: brightness(0.4);
+  
+  position: absolute;
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+}
+
+.photo-section__text {
+    margin-top: 30vh;
+    font-weight: bold;
+}
+
+.white-section {
+  grid-column: 1 / -1;
+  position: relative;
+  background-color: white;
+  
+  padding: 4rem 0;
+}
+
+.quote__wrapper {
+    grid-column: 2 / span 1;
+    display: grid;
+    grid-template-columns: auto 1fr;
+}
+
+.main-grid-template__text {
+    grid-column: 2 / span 1;
+}
+
+.main-grid-template__text--list li {
+    list-style-type: none;
+    margin-top: 1rem;
+}
+
+.quote__wrapper__quote-symbol {
+    grid-column: 1 / span 1;
+}
+
+.quote__wrapper__quote-text {
+    grid-column: 2 / span 1;
+    font-family: var(--font-secondary);
+    font-size: 1.2rem;
+    line-height: 1.8rem;
+}
+
+.main-grid-template__title {
   grid-column: 2 / span 1;
 }
 
