@@ -28,10 +28,12 @@
   --font-primary: 'Lato';
   --font-secondary: 'Century Schoolbook';
   --color-text: #4A4A4A;
-  --color-highlight: #DD8A78;
+  --color-orange: #DD8A78;
   --color-light-grey: #F7F7F7;
+  --color-off-grey: #F0F0EA;
   --color-dark-grey: #343434;
   --color-border: #CDCDCD;
+  --color-green: #223B34;
 }
 
 
@@ -54,6 +56,7 @@ html, body {
   font-family: var(--font-secondary);
   font-size: 2.5rem;
   line-height: 3rem;
+  font-weight: bold;
 }
 
 .text--body {
@@ -69,11 +72,26 @@ html, body {
   color: var(--color-text);
 }
 
+.text--subtitle {
+  font-family: var(--font-primary);
+  font-size: 1rem;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
 .text--dark {
   color: var(--color-text);
 }
 
-.text-white {
+.text--orange {
+  color: var(--color-orange);
+}
+
+.text--green {
+  color: var(--color-green);
+}
+
+.text--white {
   color: white;
 }
 
@@ -101,8 +119,16 @@ html, body {
   background-color: var(--color-light-grey);
 }
 
+.bg-orange {
+  background-color: var(--color-orange);
+}
+
 .bg-dark {
   background-color: var(--color-dark-grey);
+}
+
+.bg-off-grey {
+  background-color: var(--color-off-grey);
 }
 
 .mb-1 {
@@ -235,7 +261,7 @@ content {
   font-family: var(--font-primary);
   text-transform: uppercase;
   color: white;
-  background-color: var(--color-highlight);
+  background-color: var(--color-orange);
   font-weight: bold;
   padding: 1rem 1.5rem;
   font-size: 1.25rem;
@@ -256,62 +282,38 @@ content {
   margin-bottom: 16rem;
 }
 
-.collage {
-  padding-bottom: 10rem;
-
-  grid-column: 3 / span 1;
-  /* grid-row: 1 / ; */
+.tiles {
+  position: relative;
+  grid-column: 1 / -1;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-gap: 3.5rem;
-  
-  grid-template-rows: 
-    30px auto 30px
-    auto
-    30px auto 30px;
+  /* grid-gap: 3.5rem; */
+  grid-template-rows: 90vh;
 }
 
-.collage__img {
-  height:100%;
+.tiles__img, .tiles__text {
+  grid-column: span 1;
+}
+
+.tiles__text-wrap {
+  display: grid;
+  grid-template-rows: 1fr auto 1fr; 
+}
+
+.tiles__text {
+  grid-row: 2 / span 1;
+  padding: 4rem;
+}
+
+.tiles__img {
+  height: 100%;
   width: 100%;
   object-fit: cover;
-  position: absolute;
 }
-
-.collage__child {
-  position: relative;
-}
-
-.collage__child1 {
-  grid-column: 1;
-  grid-row: 1 / span 3;
-}
-.collage__child2 {
-  grid-column: 2;
-  grid-row: 2 / span 1;
-}
-.collage__child3 {
-  grid-column: 2;
-  grid-row: 3 / span 3;
-}
-.collage__child4 {
-  grid-column: 1;
-  grid-row: 4 / span 1;
-}
-.collage__child5 {
-  grid-column: 1;
-  grid-row: 5 / span 3;
-}
-.collage__child6 {
-  grid-column: 2;
-  grid-row: 6 / span 1;
-}
-
 
 .large-photo-section {
   grid-column: 1 / span 5;
   border: 2rem solid white;
-
   height: 500px;
   overflow: hidden;
 }
