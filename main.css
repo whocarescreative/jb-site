@@ -223,7 +223,6 @@ header {
 .header__blurb {
   grid-row: 2 / span 1;
    margin-left: 55%;
-  /* margin-top: 22rem; */
   width: 25rem;
 }
 
@@ -295,6 +294,10 @@ content {
   grid-template-rows: 90vh;
 }
 
+.tiles--preserve-aspect {
+  grid-template-rows: auto;
+}
+
 .tiles__img, .tiles__text {
   grid-column: span 1;
 }
@@ -315,6 +318,9 @@ content {
   object-fit: cover;
 }
 
+.tiles__img--preserve-aspect {
+  height: auto;
+}
 
 /*#endregion Content*/
 
@@ -618,7 +624,7 @@ content {
   
   .tiles__text {
     grid-row: 2 / span 1;
-    padding: 2rem;
+    padding: 4rem 2rem;
   }
   
   .tiles__img {
