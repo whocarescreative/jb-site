@@ -606,30 +606,28 @@ content {
     grid-template-columns: 0rem 2rem 1fr 2rem 0rem;
   }
 
-  .collage {
-    grid-column: 1 / -1;
-    grid-gap: 2rem;
+  .tiles {
     grid-template-columns: 1fr;
-    grid-template-rows:repeat(6, auto);
-  }
-
-  .collage__image-child {
-      height: 350px;
-      overflow: hidden;
-  }
-
-  .collage__img {
-    position: relative;
-    height: 450px;
-  }
-
-  .collage__text {
-    padding: 0 2rem;
+    grid-template-rows: auto auto;
   }
   
-  .collage__child {
-    grid-column: 1;
-    grid-row: span 1;
+  .tiles__img, .tiles__text {
+    grid-column: span 1;
+  }
+  
+  .tiles__text-wrap {
+    display: grid;
+    grid-template-rows: auto;
+  }
+  
+  .tiles__text {
+    grid-row: 2 / span 1;
+    padding: 2rem;
+  }
+  
+  .tiles__img {
+    height: 450px;
+    grid-row: 1;
   }
 
   .large-photo-section {
