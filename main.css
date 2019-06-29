@@ -263,7 +263,7 @@ nav {
     grid-template-rows: auto;
     grid-template-columns: 
     minmax(4rem, 1fr)
-    minmax(auto, 900px)
+    minmax(auto, 1100px)
     minmax(4rem, 1fr);
 }
 
@@ -276,12 +276,13 @@ content {
   text-transform: uppercase;
   color: white;
   background-color: var(--color-orange);
-  font-weight: bold;
+  font-weight: normal;
   padding: 1rem 1.5rem;
   font-size: 1.25rem;
   cursor: pointer;
   display: inline-block;
   text-decoration: none;
+  letter-spacing: 5px;
 }
 
 .btn--white {
@@ -452,8 +453,12 @@ content {
     grid-column: 2 / span 1;
 }
 
+.main-grid-template__text--list {
+    padding-inline-start: 0;
+}
+
 .main-grid-template__text--list li {
-    list-style-type: '-';
+    list-style-type: none;
     margin-top: 1rem;
 }
 
