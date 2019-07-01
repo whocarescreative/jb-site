@@ -309,7 +309,7 @@ content {
   grid-template-rows: auto;
 }
 
-.tiles__img, .tiles__text {
+.tiles__img__wrap, .tiles__text {
   grid-column: span 1;
 }
 
@@ -324,13 +324,17 @@ content {
 }
 
 .tiles__img {
-  height: 100%;
+  height: 120%;
   width: 100%;
   object-fit: cover;
 }
 
 .tiles__img--preserve-aspect {
   height: auto;
+}
+
+.tiles__img__wrap {
+    overflow: hidden;
 }
 
 /*#endregion Content*/
@@ -628,7 +632,7 @@ content {
     grid-template-rows: auto auto;
   }
   
-  .tiles__img, .tiles__text {
+  .tiles__img__wrap, .tiles__text {
     grid-column: span 1;
   }
   
@@ -642,7 +646,7 @@ content {
     padding: 4rem 2rem;
   }
   
-  .tiles__img {
+  .tiles__img__wrap {
     height: 450px;
     grid-row: 1;
   }

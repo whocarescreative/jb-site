@@ -39,7 +39,9 @@
             </div>
 
             <div class="tiles">
-                <img src="img/together.jpeg" class="tiles__img" alt="Jana sitting elegantly beside a client, smiling, and pointing to a document."/>
+                <div class="tiles__img__wrap">
+                    <img src="img/together.jpeg" class="tiles__img" alt="Jana sitting elegantly beside a client, smiling, and pointing to a document."/>
+                </div>
                 <div class="tiles__text-wrap">
                     <div class="tiles__text">
                             <div class="text--subtitle text--orange mb-1">conscious coaching</div>
@@ -61,16 +63,19 @@
                             Businesses are built in the context of your life. 
                         </h2>
                         <div class="text--sm text--white mb-2">
-                                I believe that business can be nourishing when approached <i>holistically</i>. You are the foundation of your enterprise. When you are confident, cared for, and able to address what’s holding you back, you can create a prosperous business and a fulfilling life.                        </div>
+                            I believe that business can be nourishing when approached <i>holistically</i>. You are the foundation of your enterprise. When you are confident, cared for, and able to address what’s holding you back, you can create a prosperous business and a fulfilling life.                        </div>
                         <a href="https://calendly.com/janaboyko/coachingsession" class="btn btn--white">Let's chat</a>
                     </div>
-                    
                 </div>
-                <img src="img/business-plan.jpeg" class="tiles__img" alt="Jana using a rose-gold pen to point to a business plan document."/>
+                <div class="tiles__img__wrap">
+                    <img src="img/business-plan.jpeg" class="tiles__img" alt="Jana using a rose-gold pen to point to a business plan document."/>
+                </div>
             </div>
 
             <div class="tiles">
-                <img src="img/computer.jpeg"  class="tiles__img" alt="A woman's hands resting comfortably on the keyboard of an apple laptop."/>
+                <div class="tiles__img__wrap">
+                    <img src="img/computer.jpeg"  class="tiles__img" alt="A woman's hands resting comfortably on the keyboard of an apple laptop."/>
+                </div>
                 <div class="tiles__text-wrap bg-off-grey">
                     <div class="tiles__text">
                             <div class="text--subtitle text--orange mb-1">diving in deep</div>
@@ -99,7 +104,9 @@
             </div>
 
             <div class="tiles tiles--preserve-aspect mb-5">
+                <div class="tiles__img__wrap">
                     <img src="img/jana-sitting.jpeg" style="object-position: center 10%" class="tiles__img tiles__img--preserve-aspect" alt="A pleasant photo of Jana smiling and looking away from the camera."/>
+                </div>
                     <div class="tiles__text-wrap">
                         <div class="tiles__text ">
                             <div class="text--subtitle text--orange mb-1">about</div>
@@ -362,7 +369,6 @@
             jumpToTopEl.addEventListener('click', () => window.scrollTo({top: 0, behavior: 'smooth'}));
 
             //animations and parallax
-            let mql = window.matchMedia('(max-width: 900px)');
 
             const leftCollageColumnEls = [
                 document.getElementsByClassName('collage__child1')[0],
@@ -374,54 +380,19 @@
                 document.getElementsByClassName('collage__child3')[0],
                 document.getElementsByClassName('collage__child6')[0]
             ];
-            const collageImageEls = document.getElementsByClassName('collage__img');
-            const largePhotoEl = document.getElementsByClassName('large-photo-section__img')[0];
-            const smallPhotoEl = document.getElementsByClassName('small-photo-section__img')[0];
+            const collageImageWrapEls = document.getElementsByClassName('tiles__img__wrap');
+            const collageImageEls = document.getElementsByClassName('tiles__img');
 
-            
             function animationLoop() {
                 requestAnimationFrame(animationLoop);
-
-                largePhotoEl.style.transform = `translate(0,${(getScrollPercent()-75)*5}px)`;
-                smallPhotoEl.style.transform = `translate(0,${(getScrollPercent()-75)*4}px)`;
-
-                if (!mql.matches) {
-                    for (const el of leftCollageColumnEls) {
-                        el.style.transform = `translate(0,${-(getScrollPercent()-30)*3}px)`;
-                    }
-                    for (const el of rightCollageColumnEls) {
-                        el.style.transform = `translate(0,${(getScrollPercent()-30)*3}px)`;
-                    }
-                    for (const el of collageImageEls) {
-                        el.style.transform = `translate(0,0)`;
-                    }
-                } else {
-                    for (const el of leftCollageColumnEls) {
-                        el.style.transform = `translate(0,0)`;
-                    }
-                    for (const el of rightCollageColumnEls) {
-                        el.style.transform = `translate(0,0)`;
-                    }
-                    let i = 0;
-                    for (const el of collageImageEls) {
-                        el.style.transform = `translate(0,${(getScrollPercent()-30-(i*5))*6}px)`;
-                        i++;
-                    }
+                let i = 0;
+                for (const el of collageImageWrapEls) {
+                    const bounds = el.getBoundingClientRect();
+                    collageImageEls[i].style.transform = `translate(0,${(bounds.top-bounds.height- 300) / 14}px)`;
+                    i++;
                 }
             }
             requestAnimationFrame(animationLoop);
-
-            function getScrollPercent() {
-                var h = document.documentElement,
-                    b = document.body,
-                    st = 'scrollTop',
-                    sh = 'scrollHeight';
-                console.log((h[st]||b[st]) / ((h[sh]||b[sh]) - h.clientHeight) * 100);
-                return (h[st]||b[st]) / ((h[sh]||b[sh]) - h.clientHeight) * 100;
-            }
-
-
-
         </script>
         <script type="application/ld+json">
             {
