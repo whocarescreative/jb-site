@@ -506,6 +506,11 @@ content {
     grid-column: 1 / span 1;
 }
 
+.quote__wrapper__quote-symbol__svg {
+  height: 80px;
+  width: 80px;
+}
+
 .quote__wrapper__quote-text {
     grid-column: 2 / span 1;
     font-family: var(--font-secondary);
@@ -521,6 +526,8 @@ content {
   grid-column: 2 / span 1;
   font-family: var(--font-primary);
 }
+
+
 
 .boxed-info-list {
   grid-column: 1 / -1;
@@ -726,6 +733,11 @@ content {
 
   .boxed-info {
     width: calc(100% - 6rem);
+  }
+
+  .quote__wrapper__quote-symbol__svg {
+    height: 50px;
+    width: auto;
   }
 
   .social-icons {
