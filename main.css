@@ -302,6 +302,11 @@ content {
   background: transparent;
 }
 
+.btn--orange {
+  background: white;
+  color: var(--color-orange);
+}
+
 .intro-section{
   grid-column: 2 / span 1;
   margin: 12rem 0;
