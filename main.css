@@ -336,6 +336,11 @@ content {
   padding: 4rem;
 }
 
+
+.tiles__text--orange-bold b {
+  color: var(--color-orange);
+}
+
 .tiles__text--top {
   grid-row: 1 / -1;
   padding: 2rem 4rem;
