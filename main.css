@@ -627,9 +627,8 @@ content {
   width: calc(calc(100% - 19rem)/3);
   max-width: 100%;
   white-space: normal;
-
   border: 1px solid var(--color-border);
-  padding: 2.5rem;
+  padding: 2rem;
   margin-right: 2rem;
 
   scroll-snap-align: center;
@@ -812,7 +811,9 @@ content {
   .boxed-info-list::after { content: ' '; min-width: 2rem; }
 
   .boxed-info {
-    width: calc(100% - 12rem);
+    padding:2rem;
+    width: calc(100% - 8rem);
+    margin-right: 1rem;
   }
 
   .quote__wrapper {
