@@ -72,7 +72,7 @@ html, body {
 
 .text--body {
   font-size: 1.5rem;
-  line-height: 2.3rem;
+  line-height: 2.4rem;
   color: var(--color-text);
 }
 
@@ -84,6 +84,7 @@ html, body {
 
 .text--subtitle {
   font-size: 1rem;
+  letter-spacing: 2px;
   font-weight: bold;
   text-transform: uppercase;
 }
@@ -232,7 +233,7 @@ header {
   width: 100%;
   height: 100%;
   box-sizing: border-box;
-  object-position: center 25%;
+  object-position: 25% 25%;
   object-fit: cover;
 }
 
@@ -306,7 +307,8 @@ content {
 
 .intro-section{
   grid-column: 2 / span 1;
-  margin: 12rem 0;
+  margin: 12rem 0 10rem;
+  padding: 0 4rem;
 }
 
 .tiles {
@@ -659,6 +661,7 @@ content {
 
   header {
     grid-template-rows: 1fr auto;
+    max-height: 100%;
   }
 
   .header--img {
@@ -667,7 +670,7 @@ content {
     border: none;
     
     object-fit: cover;
-    object-position: center 40%;
+    object-position: 10% 40%;
 
     grid-row: 1 / span 1;
   }
