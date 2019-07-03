@@ -253,6 +253,45 @@ header {
 
 /*#region Content*/
 
+#signature {
+  height: 60px;
+  width: auto;
+}
+
+#signature .sig-element {
+  stroke-width:3;
+  stroke: var(--color-dark-grey);
+  stroke-dasharray:800; /* how long the dashes are */
+  stroke-dashoffset:800; /*how far they are spaced */
+}
+
+#signature.animate .sig-element {
+  animation-play-state: running;
+}
+
+#signature .dash {
+  animation: write 2s linear forwards 0.3s paused;
+}
+
+#signature .jay {
+  animation: write 0.8s linear forwards 0.7s paused;
+}
+
+#signature .ana {
+  animation: write-backwards 1.8s linear forwards 0s paused;
+}
+
+@keyframes write {
+  from {stroke-dashoffset:800;}
+  to {stroke-dashoffset:0;}
+}
+
+@keyframes write-backwards {
+  from {stroke-dashoffset:800;}
+  to {stroke-dashoffset:1600;}
+}
+
+
 .logo {
   height: 3vw;
 }
@@ -679,6 +718,10 @@ content {
     margin: 2rem;
     width: 18rem;
     grid-row: 2 / span 1;
+  }
+
+  .intro-section {
+    padding: 0;
   }
 
   .logo {
