@@ -812,7 +812,7 @@ content {
   .boxed-info-list::after { content: ' '; min-width: 2rem; }
 
   .boxed-info {
-    width: calc(100% - 6rem);
+    width: calc(100% - 12rem);
   }
 
   .quote__wrapper {
