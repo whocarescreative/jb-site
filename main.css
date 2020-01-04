@@ -698,7 +698,7 @@ content {
 @media screen and (max-width: 900px) {
 
   header {
-    grid-template-rows: 1fr 400px;
+    grid-template-rows: 1fr auto;
     max-height: 100%;
   }
 
@@ -714,8 +714,13 @@ content {
   }
   
   .header__blurb {
-    margin: 2rem;
+    padding: 4rem;
     width: 18rem;
+
+    position: absolute;
+    bottom: 0;
+    background: white;
+
     grid-row: 2 / span 1;
   }
 
