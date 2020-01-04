@@ -699,7 +699,6 @@ content {
 
   header {
     grid-template-rows: 1fr auto;
-    max-height: 100%;
   }
 
   .header--img {
@@ -714,13 +713,8 @@ content {
   }
   
   .header__blurb {
-    padding: 4rem;
+    margin: 2rem;
     width: 18rem;
-
-    position: absolute;
-    bottom: 0;
-    background: white;
-
     grid-row: 2 / span 1;
   }
 
